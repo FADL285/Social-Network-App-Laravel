@@ -2,10 +2,11 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Auth\LoginController;
-use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Like\LikeController;
 use App\Http\Controllers\Post\PostController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Comment\CommentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,3 +32,6 @@ Route::apiResource('posts',PostController::class);
 
 // Like 
 Route::post('like',LikeController::class);
+
+// Comment
+Route::post('comment',CommentController::class);
