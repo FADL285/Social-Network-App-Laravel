@@ -83,6 +83,7 @@ class PostController extends Controller
     {
         Image::delete($post->image);
 
+        $post->likes()->delete();
         $post->delete();
 
         return [
