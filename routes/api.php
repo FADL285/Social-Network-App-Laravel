@@ -7,6 +7,7 @@ use App\Http\Controllers\Post\PostController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Comment\CommentController;
+use App\Http\Controllers\Profile\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 // Auth
 Route::post('login',LoginController::class);
 Route::post('register',RegisterController::class);
+
+// Profile
+Route::resource('profile', ProfileController::class)->only(['index','store']);
 
 // Posts
 Route::apiResource('posts',PostController::class);
