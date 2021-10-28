@@ -12,10 +12,11 @@
 |--- | --- | --- |
 | Authentication | [Login](#login), [Register](#register) | no |
 | Profile | [Show](#show-profile), [Update](#update-profile) | yes |
-| Friend Request | [Send](#send-friend-request), [accept](#accept-friend-request), [remove](#remove-friend-request)  | yes |
+| Friend Request | [Send](#send-friend-request), [Accept](#accept-friend-request), [Remove](#remove-friend-request)  | yes |
 | Post | [Index](#index-post), [Create](#create-post), [Update](#update-post), [Show](#show-post),[Delete](#delete-post) | yes |
 | Like | [Like](#like) | yes |
 | Comment | [Comment](#comment) | yes |
+| User | [All Users](#all-uers), [Single User](#single-user) | yes |
 
 # Register
 
@@ -345,6 +346,38 @@
 * Requires
 
     `post_id=[number]` , `body=[text]`
+
+* Return
+
+    `data`
+   
+<hr>
+
+# All Users
+
+* URL
+
+    https://social-app-laravel.herokuapp.com/api/users
+
+* Method
+
+    `GET`
+
+* Return
+
+    `data`
+   
+<hr>
+
+# Single User
+
+* URL
+
+    https://social-app-laravel.herokuapp.com/api/users/{user_id}
+
+* Method
+
+    `GET`
 
 * Return
 

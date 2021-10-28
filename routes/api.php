@@ -11,6 +11,7 @@ use App\Http\Controllers\Friend\UnFriendController;
 use App\Http\Controllers\Profile\ProfileController;
 use App\Http\Controllers\Friend\SendFriendController;
 use App\Http\Controllers\Friend\AcceptFriendController;
+use App\Http\Controllers\User\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,3 +50,6 @@ Route::prefix('/friend')->middleware('auth:sanctum')->group(function (){
     Route::post('/accept',AcceptFriendController::class);
     Route::delete('/remove',UnFriendController::class);
 });
+
+// User
+Route::apiResource('users',UserController::class)->only(['index','show']);
