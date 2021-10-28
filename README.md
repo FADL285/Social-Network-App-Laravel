@@ -49,7 +49,7 @@
 
 * URL
 
-    https://social-app-laravel.herokuapp.com/api/register
+    https://social-app-laravel.herokuapp.com/api/login
 
 * Method
 
