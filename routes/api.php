@@ -7,7 +7,10 @@ use App\Http\Controllers\Post\PostController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Comment\CommentController;
+use App\Http\Controllers\Friend\UnFriendController;
 use App\Http\Controllers\Profile\ProfileController;
+use App\Http\Controllers\Friend\SendFriendController;
+use App\Http\Controllers\Friend\AcceptFriendController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,3 +42,10 @@ Route::post('like',LikeController::class);
 
 // Comment
 Route::post('comment',CommentController::class);
+
+// Friends
+Route::prefix('/friend')->middleware('auth:sanctum')->group(function (){
+    Route::post('/send',SendFriendController::class);
+    Route::post('/accept',AcceptFriendController::class);
+    Route::post('/remove',UnFriendController::class);
+});
