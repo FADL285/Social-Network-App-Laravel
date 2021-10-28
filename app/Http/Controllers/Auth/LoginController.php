@@ -19,9 +19,9 @@ class LoginController extends Controller
                 'token' => $user->createToken(time())->plainTextToken
             ];
         }else {
-            return [
+            return response()->json([
                 'message' => 'these credentials do not match our records.'
-            ];
+            ],401);
         }
     }
 }
