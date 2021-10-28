@@ -14,7 +14,7 @@ class SendFriendController extends Controller
 
         $friend = Friend::where('user_id',auth()->id())
                 ->where('friend_id',$request->friend_id)
-                ->orWhere('user_id',$request->friend)
+                ->orWhere('user_id',$request->friend_id)
                 ->where('friend_id',auth()->id())
                 ->first();
 

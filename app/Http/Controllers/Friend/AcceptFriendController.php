@@ -20,6 +20,10 @@ class AcceptFriendController extends Controller
             $friend->update([
                 'accepted' => true,
             ]);
+
+            return [
+                'message' => 'Friend Request Accepted Successfully',
+            ];
         }else {
             return response()->json([
                 'message' => 'Not Found',
