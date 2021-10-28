@@ -2,8 +2,8 @@
 
 namespace App\Http\Resources;
 
-use App\Models\Like;
 use Carbon\Carbon;
+use App\Models\Like;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class PostResource extends JsonResource

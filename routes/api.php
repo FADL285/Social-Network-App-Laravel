@@ -47,5 +47,5 @@ Route::post('comment',CommentController::class);
 Route::prefix('/friend')->middleware('auth:sanctum')->group(function (){
     Route::post('/send',SendFriendController::class);
     Route::post('/accept',AcceptFriendController::class);
-    Route::post('/remove',UnFriendController::class);
+    Route::delete('/remove',UnFriendController::class);
 });
