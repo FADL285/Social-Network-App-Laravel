@@ -50,6 +50,11 @@ class User extends Authenticatable
                 ->withPivot('accepted');
     }
 
+    public function friends_requests()
+    {
+        return $this->hasMany(Friend::class,'user_id')->where('accepted',0);
+    }
+
     public function posts()
     {
         return $this->hasMany(Post::class);

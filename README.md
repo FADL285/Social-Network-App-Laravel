@@ -12,7 +12,7 @@
 |--- | --- | --- |
 | Authentication | [Login](#login), [Register](#register) | no |
 | Profile | [Show](#show-profile), [Update](#update-profile) | yes |
-| Friend Request | [Send](#send-friend-request), [Accept](#accept-friend-request), [Remove](#remove-friend-request)  | yes |
+| Friend Request | [Friend Requests](#friend-requests), [Send](#send-friend-request), [Accept](#accept-friend-request), [Remove](#remove-friend-request)  | yes |
 | Post | [Index](#index-post), [Create](#create-post), [Update](#update-post), [Show](#show-post),[Delete](#delete-post) | yes |
 | Like | [Like](#like) | yes |
 | Comment | [Comment](#comment) | yes |
@@ -108,6 +108,24 @@
 
     `password=[password]` , `avatar=[image]`
 
+
+* Return
+
+    `data`
+    
+<hr>
+
+#  Friend Requests
+
+**All Users That Sent Friend Request to You**
+
+* URL
+
+    https://social-app-laravel.herokuapp.com/api/friend/requests
+
+* Method
+
+    `GET`
 
 * Return
 

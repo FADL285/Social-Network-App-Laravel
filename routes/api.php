@@ -11,6 +11,7 @@ use App\Http\Controllers\Friend\UnFriendController;
 use App\Http\Controllers\Profile\ProfileController;
 use App\Http\Controllers\Friend\SendFriendController;
 use App\Http\Controllers\Friend\AcceptFriendController;
+use App\Http\Controllers\Friend\FriendRequestsController;
 use App\Http\Controllers\User\UserController;
 
 /*
@@ -46,6 +47,7 @@ Route::post('comment',CommentController::class);
 
 // Friends
 Route::prefix('/friend')->middleware('auth:sanctum')->group(function (){
+    Route::get('/requests',FriendRequestsController::class);
     Route::post('/send',SendFriendController::class);
     Route::post('/accept',AcceptFriendController::class);
     Route::delete('/remove',UnFriendController::class);
