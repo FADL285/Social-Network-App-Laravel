@@ -7,6 +7,7 @@ use App\Http\Controllers\Post\PostController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Comment\CommentController;
+use App\Http\Controllers\Comment\CommentPostController;
 use App\Http\Controllers\Friend\UnFriendController;
 use App\Http\Controllers\Profile\ProfileController;
 use App\Http\Controllers\Friend\SendFriendController;
@@ -55,3 +56,6 @@ Route::prefix('/friend')->middleware('auth:sanctum')->group(function (){
 
 // User
 Route::apiResource('users',UserController::class)->only(['index','show']);
+
+// Post Comments 
+Route::get('posts/{post}/comments',CommentPostController::class);

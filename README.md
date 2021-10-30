@@ -17,6 +17,7 @@
 | Like | [Like](#like) | yes |
 | Comment | [Comment](#comment) | yes |
 | User | [All Users](#all-uers), [Single User](#single-user) | yes |
+| Post Comments | [Show All Post Comments](#show-all-post-comments) | yes |
 
 # Register
 
@@ -392,6 +393,22 @@
 * URL
 
     https://social-app-laravel.herokuapp.com/api/users/{user_id}
+
+* Method
+
+    `GET`
+
+* Return
+
+    `data`
+   
+<hr>
+
+# Show All Post Comments
+
+* URL
+
+    https://social-app-laravel.herokuapp.com/api/posts/{post_id}/comments
 
 * Method
 
