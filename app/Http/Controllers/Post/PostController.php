@@ -65,6 +65,11 @@ class PostController extends Controller
      */
     public function update(PostRequest $request,Post $post)
     {
+
+        if($post->user_id != auth()->id()){
+            return response()->json(['message' => 'Forbidden'],403);
+        }
+
         $post->update([
             'body' => $request->body,
             'image' => Image::update('image',$post->image),
@@ -81,6 +86,11 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
+
+        if($post->user_id != auth()->id()){
+            return response()->json(['message' => 'Forbidden'],403);
+        }
+
         Image::delete($post->image);
 
         $post->comments()->delete();
