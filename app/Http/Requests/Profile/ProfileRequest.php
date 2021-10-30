@@ -35,7 +35,7 @@ class ProfileRequest extends FormRequest
     
     protected function failedValidation(Validator $validator)
     {
-        throw new HttpResponseException(response()->json($validator->messages()->all()));
+        throw new HttpResponseException(response()->json($validator->messages()->all(),400));
     }
 
 }
