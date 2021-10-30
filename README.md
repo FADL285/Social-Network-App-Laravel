@@ -1,5 +1,10 @@
 # Social Network App Laravel
 
+The Social Network Application is the graduation project of the ITI Summer Internship (Back-End Track).
+
+<h2 align="center">API Documentation:</h2>
+
+---
 ## Notes:
 * Add Accept: application/json in headers in all requests
 * Add Authorization: Bearer {token} in headers in requests requires Authentication 
